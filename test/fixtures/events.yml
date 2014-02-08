@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content_source: MyString
+  content: MyText
+  person: MyString
+  abuse_flag: false
+  references: 
+
+two:
+  content_source: MyString
+  content: MyText
+  person: MyString
+  abuse_flag: false
+  references: 
