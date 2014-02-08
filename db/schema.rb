@@ -16,6 +16,16 @@ ActiveRecord::Schema.define(version: 20140208205438) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "events", force: true do |t|
+    t.string   "content_source"
+    t.text     "content"
+    t.string   "person"
+    t.boolean  "abuse_flag"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.datetime "content_created_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
