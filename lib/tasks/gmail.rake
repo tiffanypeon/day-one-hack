@@ -1,6 +1,7 @@
-desc "Log in to GMail, save last 100 messages into events hash"
 	task :save_emails => :environment do
-		require 'gmail'
+		username = # email username
+		password = # password for email account, will eventually be set as ENV var
+		abuser_email = # abuser email address
 		# Log in to gmail account
 		gmail = Gmail.connect(username, password)
 		#need to set up username, password in ENV
@@ -9,7 +10,7 @@ desc "Log in to GMail, save last 100 messages into events hash"
 		gmail_hash = Hash.new
 
 		emails.take(10).each do |email|
-			gmail_hash[email.date] ||= email.body.raw_source
+			Event.create(:content_created_at => email.date, :content => email.body.raw_source)
 		end
+
 	end
-end
