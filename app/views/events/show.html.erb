@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content source:</strong>
+  <%= @event.content_source %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @event.content %>
+</p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @event.person %>
+</p>
+
+<p>
+  <strong>Abuse flag:</strong>
+  <%= @event.abuse_flag %>
+</p>
+
+<p>
+  <strong>Content created at:</strong>
+  <%= @event.content_created_at %>
+</p>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
