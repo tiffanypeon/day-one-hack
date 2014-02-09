@@ -9,7 +9,12 @@ task :save_instagram, [:user_id] => :environment do |t, args|
     comments.data.each do |comment|
       puts comment.inspect
       if comment.from.id.to_i == user.instagram_abuser_id
-        Event.create(content: comment.text)
+        Event.find_or_create_by(
+          content_source: 'instagram',
+          content: comment.text,
+          person: comment.from.username,
+          content_created_at: Time.at(comment.created_time.to_i)
+        )
       end
     end
   end
