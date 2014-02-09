@@ -3,6 +3,10 @@ class EventsController < ApplicationController
 
   # GET /events
   # GET /events.json
+
+  def authorize
+  end
+  
   def index
     @events = Event.order(:content_created_at)
   end
