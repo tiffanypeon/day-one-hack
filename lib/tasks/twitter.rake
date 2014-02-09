@@ -1,3 +1,5 @@
+#edit for twitter
+
 task :save_twitter => :environment do
 	username = # twitter username
 	password = # password for email account, will eventually be set as ENV var

@@ -1,6 +1,7 @@
 def abuser_tweet
     require "twitter"
-  
+    
+    #need to add secret keys as env vars and remove here
     user = Twitter::REST::Client.new do |config|
       config.consumer_key = 'FJEHpHWmzaYRrgmT0nQew'
       config.consumer_secret =  'b57WfRN8a6GgwMPFAEigwLrLIy4WbifGZ81HleIqMg'
@@ -10,7 +11,7 @@ def abuser_tweet
   
     #fetch tweets from abuser
     user.search("from:#{abuser_twitter_handle}", :result_type => "recent").take(50).collect do |tweet|
-      "#{tweet.timestamp.strftime("%D %r")} : #{tweet.text}"
+      "#{tweet.created_at.strftime("%D %r")} : #{tweet.text}"
     end
     
     
