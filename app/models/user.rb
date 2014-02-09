@@ -1,3 +1,6 @@
+require 'rake'
+load File.join(Rails.root, 'lib', 'tasks', 'instagram.rake')
+
 class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
@@ -20,6 +23,6 @@ class User < ActiveRecord::Base
   end
 
   def update_events
-    # Run all rake tasks
+    Rake::Task['save_instagram'].execute(self.id)
   end
 end
