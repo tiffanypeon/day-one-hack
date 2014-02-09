@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app is a project for the XO Group #hackuponacause event, for the non-profit dayoneny.org. This site gives a user the ability to authorize all of his/her social media accounts and consolidate contact history from a specific individual. The key purpose of the app is to provide the user with a comprehensive history of contacts from an individual against whom the user has (or has the intention of filing) a protective order. This project is not yet deployed as of 2/9/2014. 
 
-Things you may want to cover:
+Technologies used:
 
-* Ruby version
+* Ruby 2.0.0 & rails 4.0.2
 
-* System dependencies
+* Gmail API - gmail gem with oAuth
+* Instagram gem 
 
-* Configuration
+Integrations pending: 
 
-* Database creation
+* Gmail 
+* Facebook 
+* Twitter
+* SMS
+* Additional email services 
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
