@@ -8,4 +8,8 @@ class UsersController < ApplicationController
   def user_params
     params.require(:user).permit(:instagram_user, :instagram_abuser)
   end
+
+  def index
+  end
+
 end

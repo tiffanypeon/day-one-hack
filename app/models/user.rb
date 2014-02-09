@@ -25,4 +25,5 @@ class User < ActiveRecord::Base
   def update_events
     Rake::Task['save_instagram'].execute(self.id)
   end
+
 end
