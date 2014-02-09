@@ -5,7 +5,8 @@
 		# Log in to gmail account
 		gmail = Gmail.connect(username, password)
 		#need to set up username, password in ENV
-		emails = gmail.inbox.find(:from => abuser_email)
+		emails = gmail.inbox.find(:from => abuser_email).reverse
+
 		#need to set up abuser_email in ENV
 		gmail_hash = Hash.new
 
