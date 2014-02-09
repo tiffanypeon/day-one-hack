@@ -10,7 +10,7 @@ def abuser_tweet
   
     #fetch tweets from abuser
     user.search("from:#{abuser_twitter_handle}", :result_type => "recent").take(50).collect do |tweet|
-      "#{tweet.text} at #{tweet.timestamp}"
+      "#{tweet.timestamp.strftime("%D %r")} : #{tweet.text}"
     end
     
     
