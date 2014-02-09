@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  before_save :get_instagram_ids
+  before_save :get_instagram_ids, :get_gmail_token
 
   after_save :update_events
 
@@ -22,7 +22,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def get_gmail_token
+    if self.gmail_user_token
+    end
+  end
+
   def update_events
-    Rake::Task['save_instagram'].execute(self.id)
+    if self.instagram_user_id
+      Rake::Task['save_instagram'].execute(self.id)
+    end
   end
 end

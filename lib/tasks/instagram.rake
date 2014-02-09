@@ -7,7 +7,6 @@ task :save_instagram, [:user_id] => :environment do |t, args|
     comments = item.comments
 
     comments.data.each do |comment|
-      puts comment.inspect
       if comment.from.id.to_i == user.instagram_abuser_id
         Event.create(content: comment.text)
       end

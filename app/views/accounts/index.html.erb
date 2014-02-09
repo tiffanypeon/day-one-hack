@@ -18,3 +18,22 @@ Instagram
   <%= f.submit 'Update Instagram' %>
 <% end %>
 </p>
+
+<p>
+Gmail - <%= link_to 'Authorize Gmail First' %>
+<%= form_for(@user) do |f| %>
+  <p>
+  Your Gmail Address Name
+  <%= f.label :gmail_user %>
+  <%= f.text_field :gmail_user %>
+  </p>
+
+  <p>
+  Other Gmail Address Name
+  <%= f.label :gmail_abuser %>
+  <%= f.text_field :gmail_abuser %>
+  </p>
+
+  <%= f.submit 'Update Gmail' %>
+<% end %>
+</p>
