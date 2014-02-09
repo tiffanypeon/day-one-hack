@@ -47,3 +47,5 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'instagram'
+
+gem "omniauth-google-oauth2"
