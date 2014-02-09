@@ -36,7 +36,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    devise (3.2.1)
+    devise (3.2.2)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -48,6 +48,12 @@ GEM
       multipart-post (~> 1.2.0)
     faraday_middleware (0.9.0)
       faraday (>= 0.7.4, < 0.9)
+    gmail (0.4.0)
+      gmail_xoauth (>= 0.3.0)
+      mail (>= 2.2.1)
+      mime (>= 0.1)
+    gmail_xoauth (0.4.1)
+      oauth (>= 0.3.6)
     hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
@@ -66,10 +72,12 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mime (0.2.0)
     mime-types (1.25.1)
     minitest (4.7.5)
     multi_json (1.8.4)
     multipart-post (1.2.0)
+    oauth (0.4.7)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyglot (0.3.3)
@@ -131,6 +139,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
   devise
+  gmail
   instagram
   jbuilder (~> 1.2)
   jquery-rails
