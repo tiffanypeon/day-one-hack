@@ -1,1 +1,20 @@
 A list of all accounts you can pull from
+
+<p>
+Instagram
+<%= form_for(@user) do |f| %>
+  <p>
+  Your User Name
+  <%= f.label :instagram_user %>
+  <%= f.text_field :instagram_user %>
+  </p>
+
+  <p>
+  Other User Name
+  <%= f.label :instagram_abuser %>
+  <%= f.text_field :instagram_abuser %>
+  </p>
+
+  <%= f.submit 'Update Instagram' %>
+<% end %>
+</p>

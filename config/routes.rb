@@ -1,7 +1,9 @@
 DayOneHack::Application.routes.draw do
 
+  get "users/edit"
   devise_for :users
 
+  resources :users
   resources :events
 
   get 'accounts/' => 'accounts#index'
