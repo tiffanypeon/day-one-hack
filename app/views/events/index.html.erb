@@ -1,6 +1,6 @@
-<h1>Listing events</h1>
+<h3>Timeline</h3>
 
-<table>
+<table class="table striped">
   <thead>
     <tr>
       <th>Content source</th>
@@ -22,9 +22,9 @@
         <td><%= event.person %></td>
         <td><%= event.abuse_flag %></td>
         <td><%= event.content_created_at %></td>
-        <td><%= link_to 'Show', event %></td>
+        <td><%= link_to 'View Details', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Remove', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'Add new interaction', new_event_path %>

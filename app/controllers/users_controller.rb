@@ -1,4 +1,8 @@
-class UsersController < ApplicationController
+class Devise::UsersController < ApplicationController
+   
+  def index
+  end
+
   def update
     @user = current_user
     @user.update_attributes!(user_params)
@@ -7,9 +11,6 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:instagram_user, :instagram_abuser)
-  end
-
-  def index
   end
 
 end
